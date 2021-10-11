@@ -6,7 +6,7 @@ FROM base AS builder
 RUN apk add --no-cache --virtual buildpackage gcc make diffutils file python3-dev musl-dev g++ libffi-dev zeromq-dev
 RUN python3 -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
-RUN pip3 install locust
+RUN pip3 install locust==2.4.0
 
 FROM base
 
