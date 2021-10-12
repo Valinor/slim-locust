@@ -1,10 +1,12 @@
-from redhat/ubi8
+FROM redhat/ubi8
 
 RUN yum install -y python3-pip python3 && \
     yum install -y gcc python3-devel file diffutils make && \
     pip3 install locust && \
+    rm -rf /root/.cache &&\
     yum autoremove -y gcc python3-devel file diffutils make && \
-    yum clean all
+    yum clean all &&\
+    rm -rf /var/lib/rpm
 
 EXPOSE 8089 5557
 

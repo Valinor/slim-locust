@@ -3,8 +3,10 @@ from fedora
 RUN yum install -y python3 &&\
     yum install -y gcc python3-devel file diffutils make python3-pip &&\
     pip3 install locust &&\
+    pip3 cache purge &&\
     yum autoremove -y gcc python3-devel file diffutils make python3-pip &&\
-    yum clean all
+    yum clean all &&\
+    rm -rf /var/lib/rpm
 
 
 EXPOSE 8089 5557
