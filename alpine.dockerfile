@@ -1,4 +1,4 @@
-from alpine
+FROM alpine:3.14.2
 
 ENV PYTHONDONTWRITEBYTECODE=1
 RUN apk add --no-cache python3 py3-setuptools py3-msgpack  py3-requests py3-gevent && \

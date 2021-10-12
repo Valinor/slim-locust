@@ -1,4 +1,4 @@
-from redhat/ubi8:8.4-211
+FROM redhat/ubi8:8.4-211
 
 RUN yum install -y python3-pip python3 && \
     yum install -y gcc python3-devel file diffutils make && \

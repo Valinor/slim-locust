@@ -1,4 +1,4 @@
-from debian:bullseye
+FROM debian:bullseye
 
 RUN apt update && \
     apt install --no-install-recommends --yes python3-pip python3 && \

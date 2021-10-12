@@ -1,4 +1,4 @@
-FROM alpine AS base
+FROM alpine:3.14.2 AS base
 
 RUN apk add --no-cache python3 py3-pip py3-gevent libzmq
 
@@ -10,7 +10,7 @@ RUN pip3 install locust==2.4.0
 
 FROM base
 
-COPY --from=builder /opt/venv /opt/venv
+COPY --FROM=builder /opt/venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
 EXPOSE 8089 5557

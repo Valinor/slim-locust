@@ -1,4 +1,4 @@
-from fedora:34
+FROM fedora:34
 
 RUN yum install -y python3 &&\
     yum install -y gcc python3-devel file diffutils make python3-pip &&\
