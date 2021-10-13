@@ -1,7 +1,7 @@
 FROM debian
 
 RUN apt update && \
-    apt install --no-install-recommends --yes python3-pip python3 && \
+    apt install --no-install-recommends --yes python3-psutil python3-pip python3 && \
     pip3 install locust && \
     pip3 cache purge && \
     apt autoremove --purge --yes python3-pip && \
