@@ -5,12 +5,12 @@ Some dockerfile personnal template alternative to official docker images
 
 ### Description
 - Official locust image (https://hub.docker.com/r/locustio/locust) : ~ 950Mo
-- This locust image debian : <215Mo
-- This locust image centos : <320Mo
-- This locust image alpine : <135Mo
+- This locust image debian : ~203Mo
+- This locust image redhat : ~271Mo
+- This locust image fedora : ~236Mo
+- This locust image alpine : ~87Mo
 
 ### Be carefull
-Same base (debian buster)
 - Offical image use Python 3.8
 - The debian base image use Python 3.7 (official debian python3 package)
 - The redhat base image use Python 3.8
@@ -23,6 +23,6 @@ Same base (debian buster)
 - Current image for redhat : 0
 
 
-Currently, this image use the latest tag for locust, it is not a good pratice.
-Latest tag when build was 1.5.3.
-Should fix that with tag and branch in next revision.
+Currently, this image use the latest tag for locust, it is latest.
+Latest tag for locust when build was 2.4.0
+Use branch to select specific Locust tag 
