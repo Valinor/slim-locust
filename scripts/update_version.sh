@@ -1,6 +1,6 @@
 set -eu
 
-if [[ $# -lt 2 ]] ; then
+if [[ $# -lt 1 ]] ; then
     echo $0 should have one argument : ex $0 {locust version}
     exit 1
 fi
