@@ -5,10 +5,11 @@ Some dockerfile personnal template alternative to official docker images
 
 ### Description
 - Official locust image (https://hub.docker.com/r/locustio/locust) : ~ 950Mo
-- This locust image debian : ~203Mo
-- This locust image redhat : ~271Mo
-- This locust image fedora : ~236Mo
-- This locust image alpine : ~87Mo
+- This locust image debian   : ~203Mo
+- This locust image redhat   : ~271Mo
+- This locust image fedora   : ~236Mo
+- This locust layered alpine : ~103Mo
+- This locust image alpine   : ~57Mo
 
 ### Be carefull
 - Offical image use Python 3.8
@@ -24,5 +25,5 @@ Some dockerfile personnal template alternative to official docker images
 
 
 Currently, this image use the latest tag for locust, it is latest.
-Latest tag for locust when build was 2.4.0
+Latest tag for locust when build was 2.4.1
 Use branch to select specific Locust tag 
