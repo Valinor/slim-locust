@@ -22,7 +22,7 @@ ENV PYTHONPATH="/venv/lib/python3.9/site-packages/"
 EXPOSE 8089 5557
 USER user
 WORKDIR /tmp
-#ENTRYPOINT ["locust"]
-
+ENTRYPOINT ["locust"]
+CMD ["--version"]
 # turn off python output buffering
 ENV PYTHONUNBUFFERED=1

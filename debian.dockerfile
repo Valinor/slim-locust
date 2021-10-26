@@ -15,6 +15,6 @@ RUN useradd --create-home locust
 USER locust
 WORKDIR /home/locust
 ENTRYPOINT ["locust"]
-
+CMD ["--version"]
 # turn off python output buffering
 ENV PYTHONUNBUFFERED=1

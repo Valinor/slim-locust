@@ -12,8 +12,8 @@ RUN apk add --no-cache python3 py3-setuptools py3-msgpack  py3-requests py3-geve
 
 EXPOSE 8089 5557
 
-WORKDIR /tmp
+WORKDIR /
 ENTRYPOINT ["locust"]
-
+CMD ["--version"]
 # turn off python output buffering
 ENV PYTHONUNBUFFERED=1
