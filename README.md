@@ -1,6 +1,9 @@
 # Slim Locust.io 
 Slim Locust Image experiment with Locust 2.4.3 and multi-arch multi-distro 
 
+/!\ Currently, problem with fedora latest (see https://medium.com/nttlabs/ubuntu-21-10-and-fedora-35-do-not-work-on-docker-20-10-9-1cd439d9921 )
+Will be corrected when docker will be upgraded
+
 ### Description
 - Official locust image (https://hub.docker.com/r/locustio/locust) : ~ 950Mo
 - This locust image debian   : ~203Mo
