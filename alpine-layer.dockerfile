@@ -1,4 +1,4 @@
-FROM alpine AS builder
+FROM alpine:3.14.2 AS builder
 ENV PYROOT=/venv
 ENV PYTHONUSERBASE=$PYROOT
 WORKDIR /
@@ -11,7 +11,7 @@ RUN find /venv -type d -name tests -exec rm -rf {} \; || :
 RUN find /venv -type d -name test -exec rm -rf {} \; || :
 RUN find /venv -type d -name __pycache__  -exec rm -rf {} \; || :
 
-FROM alpine
+FROM alpine:3.14.2
 RUN adduser -D user && \
     apk add --no-cache python3 py3-setuptools py3-msgpack libzmq 
 COPY --from=builder /venv /venv

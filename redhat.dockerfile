@@ -1,9 +1,9 @@
-FROM redhat/ubi8
+FROM redhat/ubi8:8.4-211
 
 RUN yum install -y python3-pip python3 && \
     yum install -y gcc gcc-c++ python3-devel file diffutils make && \
     pip3 install packaging && \
-    pip3 install locust && \
+    pip3 install locust==2.4.3 && \
     rm -rf /root/.cache &&\
     yum autoremove -y gcc python3-devel file diffutils make && \
     yum clean all &&\

@@ -25,5 +25,5 @@ Some dockerfile personnal template alternative to official docker images
 
 
 Currently, this image use the latest tag for locust, it is latest.
-Latest tag for locust when build was 2.4.1
+Latest tag for locust when build was 2.4.3
 Use branch to select specific Locust tag 

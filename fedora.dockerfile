@@ -1,8 +1,8 @@
-from fedora
+from fedora:34
 
 RUN yum install -y python3 &&\
     yum install -y gcc python3-devel file diffutils make python3-pip &&\
-    pip3 install locust &&\
+    pip3 install locust==2.4.3 &&\
     pip3 cache purge &&\
     yum autoremove -y gcc python3-devel file diffutils make python3-pip &&\
     yum clean all &&\
