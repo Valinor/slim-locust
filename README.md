@@ -1,3 +1,5 @@
+![docker-image workflow](https://github.com/Valinor/slim-locust/actions/workflows/docker-image.yml/badge.svg)
+
 # Slim Locust.io 
 Slim Locust Image experiment with Locust 2.4.3 and multi-arch multi-distro 
 
