@@ -1,7 +1,5 @@
-# docker-collection
-Some dockerfile personnal template alternative to official docker images
-
-## Non official slim Locust.io
+# Slim Locust.io 
+Slim Locust Image experiment with Locust 2.4.3 and multi-arch multi-distro 
 
 ### Description
 - Official locust image (https://hub.docker.com/r/locustio/locust) : ~ 950Mo
@@ -25,5 +23,7 @@ Some dockerfile personnal template alternative to official docker images
 
 
 Currently, this image use the latest tag for locust, it is latest.
-Latest tag for locust when build was 2.4.1
-Use branch to select specific Locust tag 
+Latest tag for locust when build was 2.4.3
+Use branch to select specific Locust tag
+
+Image are push on dockerhub : https://hub.docker.com/repository/docker/damballa/locust
