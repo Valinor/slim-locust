@@ -1,0 +1,10 @@
+schemaVersion: '2.0.0'
+commandTests:
+  - name: "version"
+    command: "locust"
+    args: ["--version"]
+    expectedOutput: ["locust 2.4.3"]
+metadataTest:
+  env:
+  entrypoint: ['locust']
+  cmd: ['--version']
