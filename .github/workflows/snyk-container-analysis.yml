@@ -4,7 +4,7 @@ name: Snyk Container
 
 on:
   schedule:
-    - cron: '19 16 * * 4'
+    - cron: '0 14 * * *'
 
 jobs:
   snyk:
