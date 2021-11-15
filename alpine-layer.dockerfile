@@ -6,7 +6,7 @@ WORKDIR /
 RUN apk add --no-cache --virtual buildpackage py3-pip gcc make diffutils file python3-dev musl-dev g++ libffi-dev zeromq-dev
 WORKDIR /
 COPY Pipfile ./
-RUN pip3 --no-cache-dir install pipenv && pipenv lock && PIP_USER=1 pipenv sync --system
+RUN pip3 --no-cache-dir install pipenv && pipenv install --skip-lock && PIP_USER=1 pipenv sync --system
 RUN find /venv -type d -name tests -exec rm -rf {} \; || :
 RUN find /venv -type d -name test -exec rm -rf {} \; || :
 RUN find /venv -type d -name __pycache__  -exec rm -rf {} \; || :
