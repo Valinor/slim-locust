@@ -5,4 +5,4 @@ if [[ $# -lt 2 ]] ; then
     exit 1
 fi
 set -eux
-for dockerfile in $(ls *.dockerfile);do docker build . -f $dockerfile -t $1:$2-$(echo $dockerfile|cut -d"." -f1); done
+for dockerfile in ${@:3};do docker build . -f $dockerfile -t $1/locust:$2-$(echo $dockerfile|cut -d"." -f1); done

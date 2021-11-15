@@ -32,3 +32,7 @@ Latest tag for locust when build was 2.4.3
 Use branch to select specific Locust tag
 
 Image are push on dockerhub : https://hub.docker.com/repository/docker/damballa/locust
+
+
+###
+Add test with https://github.com/GoogleContainerTools/container-structure-test/
