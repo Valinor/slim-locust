@@ -4,7 +4,7 @@ name: Snyk Container
 
 on:
   schedule:
-    - cron: '22 14 * * *'
+    - cron: '42 14 * * *'
 
 jobs:
   snyk:
@@ -25,7 +25,6 @@ jobs:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       with:
         image: damballa/locust:latest-debian 
-        args: --file=Dockerfile
     - name: Upload result to GitHub Code Scanning
       uses: github/codeql-action/upload-sarif@v1
       with:
