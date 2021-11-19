@@ -32,4 +32,4 @@ jobs:
         run: echo ${{ steps.buildx.outputs.platforms }}
 
       - name: Build the latest Docker image
-        run: scripts/build_all_buildx.sh local latest alpine.dockerfile
+        run: scripts/build_all_buildx.sh damballa latest alpine.dockerfile
