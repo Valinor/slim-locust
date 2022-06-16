@@ -18,7 +18,7 @@ RUN adduser -D user && \
 COPY --from=builder /venv /venv
 
 ENV PATH="/venv/bin:$PATH"
-ENV PYTHONPATH="/venv/lib/python3.9/site-packages/"
+ENV PYTHONPATH="/venv/lib/python3.10/site-packages/"
 
 EXPOSE 8089 5557
 USER user
