@@ -29,11 +29,12 @@ For version 2.9.0 of locust
 - The fedora ubi base image use Python 3.10
 - The alpine base image use Python 3.10
 
-### Vulnerability scan : (docker scan)
-- Old Offical image : 368 (2.4.3)
+### Vulnerability scan : (docker scan with Snyk)
+- Old Offical image : 368 (2.4.3) 81 for 2.9.0
+
 - Current image for alpine : 0
 - Current image for redhat : 0
-
+- Current image for debian : 54
 
 Currently, this image use the latest tag for locust, it is latest.
 Latest tag for locust when build was 2.9.0
