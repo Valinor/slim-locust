@@ -4,7 +4,10 @@
 Slim Locust Image experiment with Locust 2.9.0 and multi-arch multi-distro 
 
 ### Description
-- Official locust image (https://hub.docker.com/r/locustio/locust) : ~ 204Mo
+Official locust image (https://hub.docker.com/r/locustio/locust) : ~ 204Mo
+
+
+For version 2.5.0 of locust
 - This locust image debian   : ~203Mo
 - This locust image redhat   : ~271Mo
 - This locust image fedora   : ~236Mo
