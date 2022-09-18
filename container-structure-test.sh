@@ -6,6 +6,8 @@ if [[ $# -lt 1 ]] ; then
 fi
 for dockerfile in $(ls *.dockerfile)
 do 
-docker pull damballa/locust:$1-$(echo $dockerfile|cut -d"." -f1)
+echo $dockerfile
+echo ###############
+#docker pull damballa/locust:$1-$(echo $dockerfile|cut -d"." -f1)
 container-structure-test test --image damballa/locust:$1-$(echo $dockerfile|cut -d"." -f1) --config locust-image-test.yaml
 done
