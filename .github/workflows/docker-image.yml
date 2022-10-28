@@ -32,13 +32,13 @@ jobs:
         run: echo ${{ steps.buildx.outputs.platforms }}
 
       - name: Build the latest Docker image
-        run: scripts/build_all_buildx.sh damballa latest debian.dockerfile          
+        run: scripts/build_all_buildx.sh damballa latest alpine.dockerfile          
  
       - name: Upgrade Docker Hub Description
         uses: Valinor/dockerhub-description@v1
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: Valinor/dockerhub-description
 
   release:
@@ -52,7 +52,7 @@ jobs:
         uses: docker/login-action@v2 
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
