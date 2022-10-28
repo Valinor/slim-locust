@@ -1,7 +1,9 @@
 ![docker-image workflow](https://github.com/Valinor/slim-locust/actions/workflows/docker-image.yml/badge.svg) [![Snyk Container](https://github.com/Valinor/slim-locust/actions/workflows/snyk-container-analysis.yml/badge.svg)](https://github.com/Valinor/slim-locust/actions/workflows/snyk-container-analysis.yml)
 
-# Slim Locust.io 
+# Slim Locust.io - Locust.io 2.13.0 for x64 and arm64 
 Slim Locust Image experiment with Locust 2.13.0 and multi-arch multi-distro 
+Origin : https://github.com/Valinor/slim-locust
+Latest : Version 2.13.0 - See https://github.com/locustio/locust/tags
 
 ### Description
 Official locust image (https://hub.docker.com/r/locustio/locust) : ~ 204Mo

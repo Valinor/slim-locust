@@ -33,7 +33,14 @@ jobs:
 
       - name: Build the latest Docker image
         run: scripts/build_all_buildx.sh damballa latest alpine.dockerfile          
-  
+ 
+      - name: Upgrade Docker Hub Description
+        uses: Valinor/dockerhub-description@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          repository: Valinor/dockerhub-description
+
   release:
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
