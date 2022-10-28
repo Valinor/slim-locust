@@ -1,7 +1,7 @@
 ![docker-image workflow](https://github.com/Valinor/slim-locust/actions/workflows/docker-image.yml/badge.svg) [![Snyk Container](https://github.com/Valinor/slim-locust/actions/workflows/snyk-container-analysis.yml/badge.svg)](https://github.com/Valinor/slim-locust/actions/workflows/snyk-container-analysis.yml)
 
 # Slim Locust.io 
-Slim Locust Image experiment with Locust 2.12.0 and multi-arch multi-distro 
+Slim Locust Image experiment with Locust 2.13.0 and multi-arch multi-distro 
 
 ### Description
 Official locust image (https://hub.docker.com/r/locustio/locust) : ~ 204Mo
@@ -14,7 +14,7 @@ For version 2.5.0 of locust
 - This locust layered alpine : ~103Mo
 - This locust image alpine   : ~57Mo
 
-For version 2.12.0 of locust
+For version 2.13.0 of locust
 - This locust image debian   : ~203Mo
 - This locust image redhat   : ~276Mo
 - This locust image fedora   : ~228Mo
@@ -37,7 +37,7 @@ For version 2.12.0 of locust
 - Current image for debian : 54
 
 Currently, this image use the latest tag for locust, it is latest.
-Latest tag for locust when build was 2.12.0
+Latest tag for locust when build was 2.13.0
 Use branch to select specific Locust tag
 
 Image are push on dockerhub : https://hub.docker.com/repository/docker/damballa/locust
