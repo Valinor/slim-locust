@@ -32,7 +32,7 @@ jobs:
         run: echo ${{ steps.buildx.outputs.platforms }}
 
       - name: Build the latest Docker image
-        run: scripts/build_all_buildx.sh damballa latest alpine.dockerfile          
+        run: scripts/build_all_buildx.sh damballa latest alpine.dockerfile debian.dockerfile
  
       - name: Upgrade Docker Hub Description
         uses: Valinor/dockerhub-description@v1
@@ -65,6 +65,6 @@ jobs:
         run: echo ${{ steps.buildx.outputs.platforms }}
 
       - name: Build the latest Docker image
-        run: scripts/build_all_buildx.sh damballa $(echo ${{ github.ref }}|cut -d"v" -f2) alpine.dockerfile
+        run: scripts/build_all_buildx.sh damballa $(echo ${{ github.ref }}|cut -d"v" -f2) alpine.dockerfile debian.dockerfile 
 
 
