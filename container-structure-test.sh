@@ -8,6 +8,6 @@ for dockerfile in $(ls *.dockerfile)
 do 
 echo $dockerfile
 echo ###############
-#docker pull damballa/locust:$1-$(echo $dockerfile|cut -d"." -f1)
+docker pull damballa/locust:$1-$(echo $dockerfile|cut -d"." -f1)
 container-structure-test test --image damballa/locust:$1-$(echo $dockerfile|cut -d"." -f1) --config locust-image-test.yaml
 done
