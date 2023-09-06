@@ -1,10 +1,10 @@
-# Because of Snyk personnal account, only test daily and not on commit.
+# Because of Snyk personnal account, only test weekly and not on commit.
 
 name: Snyk Container
 
 on:
   schedule:
-    - cron: '25 15 * * *'
+    - cron: '25 15 */7 * *'
 
 jobs:
   snyk:
@@ -19,9 +19,6 @@ jobs:
       continue-on-error: true
       uses: snyk/actions/docker@master
       env:
-        # In order to use the Snyk Action you will need to have a Snyk API token.
-        # More details in https://github.com/snyk/actions#getting-your-snyk-token
-        # or you can signup for free at https://snyk.io/login
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       with:
         image: damballa/locust:latest-alpine
