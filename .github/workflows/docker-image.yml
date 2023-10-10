@@ -32,7 +32,7 @@ jobs:
         run: echo ${{ steps.buildx.outputs.platforms }}
 
       - name: Build the latest Docker image
-        run: scripts/build_all_buildx.sh damballa latest alpine.dockerfile debian.dockerfile
+        run: scripts/build_all_buildx.sh damballa latest alpine.dockerfile debian.dockerfile distroless.dockerfile
  
       - name: Upgrade Docker Hub Description
         uses: Valinor/dockerhub-description@v1
