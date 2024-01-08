@@ -11,7 +11,7 @@ LABEL "version"="latest"
 
 RUN apk add --no-cache python3 py3-setuptools py3-msgpack  py3-requests py3-gevent py3-six && \
     apk add --no-cache --virtual buildpackage py3-pip gcc make diffutils file python3-dev musl-dev g++ libffi-dev zeromq-dev && \
-    if [[ ${LOCUST_VERSION} == "latest" ]]; then pip3 install locust; else pip3 install locust==${LOCUST_VERSION}; fi &&\
+    if [[ ${LOCUST_VERSION} == "latest" ]]; then pip3 install --break-system-packages locust; else pip3 install --break-system-packages locust==${LOCUST_VERSION}; fi &&\
     pip3 cache purge && \
     apk del buildpackage && \
     apk add --no-cache libzmq && \
