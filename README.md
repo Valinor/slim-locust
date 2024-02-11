@@ -3,7 +3,7 @@
 # Slim Locust.io - Locust.io for x64 and arm64 
 Slim Locust Image experiment with Locust multi-arch multi-distro 
 Origin : https://github.com/Valinor/slim-locust
-Latest : Version 2.20.1 - See https://github.com/locustio/locust/tags
+Latest : Version 2.22.0 - See https://github.com/locustio/locust/tags
 
 ### Description
 Official locust image (https://hub.docker.com/r/locustio/locust) : ~ 263Mo  (87Mo compressed)
@@ -28,7 +28,7 @@ Fedora is pretty long to build for arm architecture
 - Current image for debian : 60 (from debian base)
 
 Currently, this image use the latest tag for locust, it is latest.
-Latest tag for locust when build was 2.17
+Latest tag for locust when build was 2.22.0
 Use tag to select specific Locust tag (or build specific tag)
 
 Image are push on dockerhub : https://hub.docker.com/repository/docker/damballa/locust
