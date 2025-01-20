@@ -5,6 +5,8 @@ name: Snyk Container
 on:
   schedule:
     - cron: '25 15 */7 * *'
+  push:
+    branches: [ main ]
 
 jobs:
   build:
