@@ -3,7 +3,12 @@
 # Slim Locust.io - Locust.io for x64 and arm64 
 Slim Locust Image experiment with Locust multi-arch multi-distro 
 Origin : https://github.com/Valinor/slim-locust
-Latest : Version 2.22.0 - See https://github.com/locustio/locust/tags
+Latest : Version 2.37.6 - See https://github.com/locustio/locust/tags
+
+## How to use this image
+docker run --rm -it -p 8089:8089 -v "%cd%/locustfile.py:/tmp/locustfile.py" damballa/locust:2.37.6-debian -f /tmp/locustfile.py
+
+Open your webrowser to http://localhost:8089
 
 ### Description
 Official locust image (https://hub.docker.com/r/locustio/locust) : ~ 263Mo  (87Mo compressed)
@@ -14,6 +19,10 @@ For version 2.16.1 of locust
 - This locust image alpine   : ~61Mo  (23Mo compressed)
 - This locust scratch image  : ~27Mo  (25.85Mo compressed)
 
+For version 2.37.6 of locust
+- This locust image debian   : ~203Mo (92Mo compressed)
+- This locust image alpine   : ~61Mo  (30Mo compressed)
+- This locust distroless image  : ~27Mo  (48Mo compressed)
 
 ### Be carefull
 
@@ -28,10 +37,11 @@ Fedora is pretty long to build for arm architecture
 - Current image for debian : 60 (from debian base)
 
 Currently, this image use the latest tag for locust, it is latest.
-Latest tag for locust when build was 2.22.0
+Latest tag for locust when build was 2.37.6
 Use tag to select specific Locust tag (or build specific tag)
 
 Image are push on dockerhub : https://hub.docker.com/repository/docker/damballa/locust
 
 ###
 Add test with https://github.com/GoogleContainerTools/container-structure-test/
+Add default locustfile.py to test the image.
