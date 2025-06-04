@@ -3,7 +3,7 @@ commandTests:
   - name: "version"
     command: "locust"
     args: ["--version"]
-    expectedOutput: ["locust 2.37.6"]
+    expectedOutput: ["locust 2.37.7"]
 metadataTest:
   env:
   entrypoint: ['locust']
