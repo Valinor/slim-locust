@@ -1,9 +1,9 @@
 ARG DEBIAN_VERSION=latest
-FROM debian:${DEBIAN_VERSION} as build
+FROM debian:${DEBIAN_VERSION} AS build
 ARG DEBIAN_VERSION
 ARG LOCUST_VERSION=latest
 
-ENV PIP_BREAK_SYSTEM_PACKAGES 1
+ENV PIP_BREAK_SYSTEM_PACKAGES=1
 
 RUN apt update && \
     apt install --no-install-recommends --yes python3-venv gcc libpython3-dev python3-pip python3-six python3-zmq python3-msgpack python3-werkzeug python3-geventhttpclient python3-gevent python3-flask-basicauth  python3-typing-extensions  python3-flask python3-roundrobin python3-configargparse  python3-jinja2 python3-click python3-itsdangerous python3-psutil patchelf && \
